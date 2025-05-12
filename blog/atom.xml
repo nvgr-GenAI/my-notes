@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://your-docusaurus-site.example.com/blog</id>
+    <title>My Site Blog</title>
+    <updated>2025-05-12T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://your-docusaurus-site.example.com/blog"/>
+    <subtitle>My Site Blog</subtitle>
+    <icon>https://your-docusaurus-site.example.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Introduction to GenAI]]></title>
+        <id>https://your-docusaurus-site.example.com/blog/2025/05/12/genai-introduction</id>
+        <link href="https://your-docusaurus-site.example.com/blog/2025/05/12/genai-introduction"/>
+        <updated>2025-05-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A brief introduction to Generative AI and its applications.]]></summary>
+        <content type="html"><![CDATA[<p>Generative AI (GenAI) is a cutting-edge field of artificial intelligence that focuses on creating new content, such as text, images, and music, by learning patterns from existing data. It has applications in various domains, including content creation, design, and automation.</p>
+<p>Stay tuned for more updates on GenAI and its impact on the future of technology!</p>]]></content>
+        <category label="GenAI" term="GenAI"/>
+        <category label="AI" term="AI"/>
+        <category label="Machine Learning" term="Machine Learning"/>
+    </entry>
+</feed>

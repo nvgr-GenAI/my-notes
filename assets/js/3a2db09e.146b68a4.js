@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_notes=self.webpackChunkmy_notes||[]).push([[121],{8070:e=>{e.exports=JSON.parse('{"tags":[{"label":"GenAI","permalink":"/blog/tags/gen-ai","count":1},{"label":"AI","permalink":"/blog/tags/ai","count":1},{"label":"Machine Learning","permalink":"/blog/tags/machine-learning","count":1}]}')}}]);
