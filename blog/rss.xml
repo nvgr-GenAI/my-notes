@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>My Site Blog</title>
-        <link>https://your-docusaurus-site.example.com/blog</link>
+        <link>https://your-docusaurus-site.example.com/my-notes/blog</link>
         <description>My Site Blog</description>
         <lastBuildDate>Mon, 12 May 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,8 +10,8 @@
         <language>en</language>
         <item>
             <title><![CDATA[Introduction to GenAI]]></title>
-            <link>https://your-docusaurus-site.example.com/blog/2025/05/12/genai-introduction</link>
-            <guid>https://your-docusaurus-site.example.com/blog/2025/05/12/genai-introduction</guid>
+            <link>https://your-docusaurus-site.example.com/my-notes/blog/2025/05/12/genai-introduction</link>
+            <guid>https://your-docusaurus-site.example.com/my-notes/blog/2025/05/12/genai-introduction</guid>
             <pubDate>Mon, 12 May 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[A brief introduction to Generative AI and its applications.]]></description>
             <content:encoded><![CDATA[<p>Generative AI (GenAI) is a cutting-edge field of artificial intelligence that focuses on creating new content, such as text, images, and music, by learning patterns from existing data. It has applications in various domains, including content creation, design, and automation.</p>
