@@ -5,32 +5,31 @@
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Feature Development Pattern | My Site</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://your-docusaurus-site.example.com/my-notes/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://your-docusaurus-site.example.com/my-notes/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/my-notes/docs/templates/feature-development-pattern"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Feature Development Pattern | My Site"><meta data-rh="true" name="description" content="This document describes the pattern used by the software engineer and Copilot while working on a feature."><meta data-rh="true" property="og:description" content="This document describes the pattern used by the software engineer and Copilot while working on a feature."><link data-rh="true" rel="icon" href="/my-notes/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/my-notes/docs/templates/feature-development-pattern"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/my-notes/docs/templates/feature-development-pattern" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/my-notes/docs/templates/feature-development-pattern" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/my-notes/blog/rss.xml" title="My Site RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/my-notes/blog/atom.xml" title="My Site Atom Feed"><link rel="stylesheet" href="/my-notes/assets/css/styles.40c66efe.css">
-<script src="/my-notes/assets/js/runtime~main.f0698b2a.js" defer="defer"></script>
+<script src="/my-notes/assets/js/runtime~main.1431a5d0.js" defer="defer"></script>
 <script src="/my-notes/assets/js/main.f063987c.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/my-notes/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/my-notes/"><div class="navbar__logo"><img src="/my-notes/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/my-notes/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">My Notes</b></a><a class="navbar__item navbar__link" href="/my-notes/docs/algorithms">Algorithms</a><a class="navbar__item navbar__link" href="/my-notes/docs/copilot">Copilot</a><a class="navbar__item navbar__link" href="/my-notes/docs/genai">GenAI</a><a class="navbar__item navbar__link" href="/my-notes/docs/ml">ML</a><a class="navbar__item navbar__link" href="/my-notes/docs/systemdesign">System Design</a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/my-notes/blog">Blogs</a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Feature Development Pattern</h1></header>
 <p>This document describes the pattern used by the software engineer and Copilot while working on a feature.</p>
-<h1>Context</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="context">Context<a href="#context" class="hash-link" aria-label="Direct link to Context" title="Direct link to Context">​</a></h2>
 <p>A software developer is going to be working in concert with Copilot to implement a feature in this software project.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="documentation">Documentation<a href="#documentation" class="hash-link" aria-label="Direct link to Documentation" title="Direct link to Documentation">​</a></h2>
 <ul>
-<li>The base documentation folder for feature development is <code>.copilot/feat</code>.</li>
-<li>The dependencies can be under <code>.copilot/deps</code>.</li>
-<li>All documentation should be in markdown format.</li>
-<li>The documents will be used by Copilot to help guide and track implementation.</li>
-<li>All new documents should start blank.</li>
-<li>The <code>.copilot/feat/lessons-learned.md</code> document captures key lessons learned during the implementation of features. It is where we will store new information which is discovered during the course of implementation. It should be used by Copilot when making implementation choices. Lessons learned should only include new lessons.</li>
-<li>The <code>.copilot/deps/</code> directory contains documentation on the dependencies, integrations, and interfaces used in this project.</li>
-<li>Feature documentation is organized in a consistent manner under <code>.copilot/feat/US[ticket-number]-[feature-name]/</code> with standardized document naming:<!-- -->
+<li>Base documentation folder for feature development: <code>.copilot/feat</code></li>
+<li>Dependencies folder: <code>.copilot/deps</code></li>
+<li>Documentation format: Markdown</li>
+<li>Key documents:<!-- -->
+<ul>
+<li><code>lessons-learned.md</code>: Captures key lessons learned during feature implementation. It is where we will store new information which is discovered during the course of implementation. Lessons learned should only include new lessons.</li>
+<li><code>.copilot/deps/</code>: Contains documentation on dependencies, integrations, and interfaces.</li>
+</ul>
+</li>
+<li>Feature documentation structure: <code>.copilot/feat/US[ticket-number]-[feature-name]/</code>
 <ul>
 <li><code>intro.md</code>: Feature introduction and context.<!-- -->
 <ul>
-<li>Create place holder sections like Introduction, Goal, Context, Implementation Guidelines</li>
-</ul>
-</li>
-<li><code>implementation-plan.md</code>: Detailed implementation milestones.<!-- -->
-<ul>
+<li>Create place holder sections like Introduction, Goal, Context, Implementation Guidelines, Dependcies
+Detailed implementation milestones.</li>
 <li>Each milestone will include a section describing the expected outcome.</li>
 <li>The implementation plan is high level.</li>
 <li>The implementation plan should not contain code, technical specifications, or directory structures. Prose only.</li>
@@ -45,34 +44,33 @@
 </ul>
 </li>
 </ul>
-<h1>Software Developer and Copilot Working Together</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="software-developer-and-copilot-working-together">Software Developer and Copilot Working Together<a href="#software-developer-and-copilot-working-together" class="hash-link" aria-label="Direct link to Software Developer and Copilot Working Together" title="Direct link to Software Developer and Copilot Working Together">​</a></h2>
 <p>The feature will be implemented by Copilot with direction and feedback given by the software engineer. Focus on understanding the work to be done before getting to the code.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="software-engineers-role">Software Engineer&#x27;s Role<a href="#software-engineers-role" class="hash-link" aria-label="Direct link to Software Engineer&#x27;s Role" title="Direct link to Software Engineer&#x27;s Role">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="roles-and-responsibilities">Roles and Responsibilities<a href="#roles-and-responsibilities" class="hash-link" aria-label="Direct link to Roles and Responsibilities" title="Direct link to Roles and Responsibilities">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="software-engineers-role">Software Engineer&#x27;s Role<a href="#software-engineers-role" class="hash-link" aria-label="Direct link to Software Engineer&#x27;s Role" title="Direct link to Software Engineer&#x27;s Role">​</a></h3>
 <p>The software engineer plays an important role in the implementation pattern. The software engineer:</p>
 <ul>
 <li>Provides feedback on changes made by Copilot.</li>
 <li>Validates milestone completion.</li>
-<li>Provides context.</li>
-<li>Makes git commits.</li>
+<li>Provides context and makes git commits.</li>
 <li>Gets documentation for Copilot.</li>
 <li>Decides when to continue to the next activity.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="copilots-role">Copilot&#x27;s Role<a href="#copilots-role" class="hash-link" aria-label="Direct link to Copilot&#x27;s Role" title="Direct link to Copilot&#x27;s Role">​</a></h2>
-<p>Copilot manages the code. This pattern is single writer and Copilot is the writer. Copilot:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="copilots-role">Copilot&#x27;s Role<a href="#copilots-role" class="hash-link" aria-label="Direct link to Copilot&#x27;s Role" title="Direct link to Copilot&#x27;s Role">​</a></h3>
+<p>Copilot manages the code. This pattern is single writer and Copilot is the writer.</p>
 <ul>
-<li>Writes the code.</li>
-<li>Keeps documents up to date.</li>
+<li>Writes the code and keeps documents up to date.</li>
 <li>Asks the software engineer for input.</li>
 </ul>
-<h1>General Pattern</h1>
-<ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-pattern">General Pattern<a href="#general-pattern" class="hash-link" aria-label="Direct link to General Pattern" title="Direct link to General Pattern">​</a></h2>
+<ol>
 <li>Copilot creates the docs for the new feature.</li>
 <li>The software engineer writes the intro file.</li>
 <li>Copilot checks its understanding of the intro file with the software engineer until consensus is reached.</li>
 <li>Copilot creates an implementation plan document.</li>
 <li>The software engineer reviews the implementation plan and provides feedback.</li>
 <li>The software engineer and Copilot work together to refine the implementation plan until the software engineer is satisfied with the plan.</li>
-<li><strong>Copilot waits for explicit approval from the software engineer before starting the implementation of any milestone.</strong></li>
+<li>Copilot waits for explicit approval from the software engineer before starting the implementation of any milestone.</li>
 <li>Copilot begins implementation work, starting with the first milestone.</li>
 <li>Copilot runs builds and tests to verify the correctness of its changes.</li>
 <li>After Copilot finishes implementation, the software engineer checks the code and application.</li>
@@ -81,45 +79,81 @@
 <li>The software engineer and Copilot continue the milestone refinement cycle until the software engineer is satisfied.</li>
 <li>The milestone is considered complete and Copilot updates the implementation progress and lessons learned docs.</li>
 <li>At the software engineer&#x27;s direction, Copilot begins work on the next milestone.</li>
-<li>This pattern continues until all the milestones are complete.</li>
+<li>This pattern continues until all milestones are complete.</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="refining-the-intro-file">Refining the Intro File<a href="#refining-the-intro-file" class="hash-link" aria-label="Direct link to Refining the Intro File" title="Direct link to Refining the Intro File">​</a></h2>
+<ul>
+<li>After the initial writing of the <code>intro.md</code> file, the software engineer can take help from Copilot to refine the file with more technical details.</li>
+<li>This includes adding implementation guidelines, dependencies, and any other relevant technical context.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="post-milestone-completion">Post Milestone Completion<a href="#post-milestone-completion" class="hash-link" aria-label="Direct link to Post Milestone Completion" title="Direct link to Post Milestone Completion">​</a></h2>
+<ul>
+<li>After each milestone completion, Copilot should ask for user approval to:<!-- -->
+<ul>
+<li>Commit the changes.</li>
+<li>Proceed to the next milestone.</li>
+<li>Create a pull request template.</li>
+</ul>
+</li>
+<li>The software engineer will make the final decision on the next action.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="post-feature-completion">Post Feature Completion<a href="#post-feature-completion" class="hash-link" aria-label="Direct link to Post Feature Completion" title="Direct link to Post Feature Completion">​</a></h2>
 <ul>
 <li>Update project-level docs such as the README file.</li>
+<li>Create a pull request content file in the feature directory if requested.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="directives">Directives<a href="#directives" class="hash-link" aria-label="Direct link to Directives" title="Direct link to Directives">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="commit-messages">Commit Messages<a href="#commit-messages" class="hash-link" aria-label="Direct link to Commit Messages" title="Direct link to Commit Messages">​</a></h2>
 <ul>
-<li>Do not begin implementing a milestone until the software developer agrees.</li>
-<li><strong>Copilot must wait for explicit approval from the software engineer before starting the implementation of any milestone.</strong></li>
+<li>Use Conventional Commits for all commit messages.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="review-and-approval-process">Review and Approval Process<a href="#review-and-approval-process" class="hash-link" aria-label="Direct link to Review and Approval Process" title="Direct link to Review and Approval Process">​</a></h2>
 <ul>
-<li><strong>Feedback Loop</strong>: After Copilot generates the implementation plan, the software engineer should review it thoroughly and provide detailed feedback. Copilot should not proceed to implementation until the software engineer explicitly approves the plan.</li>
-<li><strong>Approval Confirmation</strong>: Copilot should ask for explicit confirmation from the software engineer before starting the implementation of any milestone. This ensures that the software engineer has had sufficient time to review and approve the plan.</li>
+<li>Feedback Loop: Thorough review of the implementation plan by the software engineer.</li>
+<li>Approval Confirmation: Explicit confirmation before starting any milestone.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="documentation-updates">Documentation Updates<a href="#documentation-updates" class="hash-link" aria-label="Direct link to Documentation Updates" title="Direct link to Documentation Updates">​</a></h2>
 <ul>
-<li><strong>Documentation Review</strong>: Before starting the implementation, Copilot should ensure that all relevant documentation is up-to-date and has been reviewed by the software engineer.</li>
-<li><strong>Progress Tracking</strong>: Copilot should regularly update the <code>implementation-progress.md</code> document with detailed progress reports, including any changes made based on feedback.</li>
+<li>Ensure all relevant documentation is up-to-date before starting implementation.</li>
+<li>Regularly update the <code>implementation-progress.md</code> document.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="implementation-phase">Implementation Phase<a href="#implementation-phase" class="hash-link" aria-label="Direct link to Implementation Phase" title="Direct link to Implementation Phase">​</a></h2>
 <ul>
-<li><strong>Milestone Verification</strong>: After completing each milestone, Copilot should run builds and tests to verify the correctness of the changes. The software engineer should then review the code and application to ensure it meets the requirements.</li>
-<li><strong>Feedback Integration</strong>: Copilot should integrate feedback from the software engineer promptly and accurately. The milestone is only considered complete when the software engineer is satisfied with the implementation.</li>
+<li>Milestone Verification: Run builds and tests to verify changes.</li>
+<li>Feedback Integration: Promptly integrate feedback from the software engineer.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="communication-and-collaboration">Communication and Collaboration<a href="#communication-and-collaboration" class="hash-link" aria-label="Direct link to Communication and Collaboration" title="Direct link to Communication and Collaboration">​</a></h2>
 <ul>
-<li><strong>Regular Check-ins</strong>: Copilot should schedule regular check-ins with the software engineer to discuss progress, challenges, and next steps. This ensures continuous alignment and collaboration.</li>
-<li><strong>Clear Communication</strong>: Copilot should communicate clearly and promptly with the software engineer, especially when seeking feedback or approval.</li>
+<li>Regular Check-ins: Discuss progress, challenges, and next steps.</li>
+<li>Clear Communication: Promptly seek feedback or approval.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="commit-best-practices">Commit Best Practices<a href="#commit-best-practices" class="hash-link" aria-label="Direct link to Commit Best Practices" title="Direct link to Commit Best Practices">​</a></h3>
 <ul>
-<li><strong>Incremental Changes</strong>: Break down complex implementations into smaller, manageable milestones. Each milestone should be independently testable and verifiable.</li>
-<li><strong>Proactive Documentation</strong>: Keep documentation proactive and detailed. This helps in tracking progress and understanding the context of changes.</li>
-<li><strong>Quality Assurance</strong>: Prioritize quality assurance by running thorough tests and reviews at each milestone. This helps in catching issues early and ensures a robust implementation.</li>
-<li><strong>Feedback and Plan Updates</strong>: Ensure that feedback from the software engineer is promptly integrated into the implementation plan documentation. This helps in maintaining an accurate and up-to-date plan.</li>
-<li><strong>Thorough Review</strong>: Allow sufficient time for the software engineer to review the implementation plan and provide feedback before proceeding to implementation. This ensures that the plan is well-understood and agreed upon.</li>
-<li><strong>Continuous Improvement</strong>: Regularly update the <code>lessons-learned.md</code> document with new insights and improvements discovered during the implementation process. This helps in refining future implementations.</li>
-</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/nvgr-GenAI/my-notes/edit/main/docs/templates/feature-development-pattern.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#documentation" class="table-of-contents__link toc-highlight">Documentation</a></li><li><a href="#software-engineers-role" class="table-of-contents__link toc-highlight">Software Engineer&#39;s Role</a></li><li><a href="#copilots-role" class="table-of-contents__link toc-highlight">Copilot&#39;s Role</a></li><li><a href="#post-feature-completion" class="table-of-contents__link toc-highlight">Post Feature Completion</a></li><li><a href="#directives" class="table-of-contents__link toc-highlight">Directives</a></li><li><a href="#review-and-approval-process" class="table-of-contents__link toc-highlight">Review and Approval Process</a></li><li><a href="#documentation-updates" class="table-of-contents__link toc-highlight">Documentation Updates</a></li><li><a href="#implementation-phase" class="table-of-contents__link toc-highlight">Implementation Phase</a></li><li><a href="#communication-and-collaboration" class="table-of-contents__link toc-highlight">Communication and Collaboration</a></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docusaurus</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/my-notes/docs/intro">Tutorial</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/in/vnakka/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/NVGR" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 My Notes, Inc. Built with Docusaurus.</div></div></div></footer></div>
+<li>Atomic Commits: Each commit represents a single logical change.</li>
+<li>Descriptive Commit Messages: Explain the &quot;why&quot; behind the change.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pull-request-best-practices">Pull Request Best Practices<a href="#pull-request-best-practices" class="hash-link" aria-label="Direct link to Pull Request Best Practices" title="Direct link to Pull Request Best Practices">​</a></h3>
+<ul>
+<li>Small and Focused PRs: Focus on a single feature or bug fix.</li>
+<li>Template Usage: Use a consistent pull request template.</li>
+<li>Review Checklist: Verify code quality, tests, and adherence to standards.</li>
+<li>Link Issues: Link the pull request to relevant issues or tasks.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="naming-conventions">Naming Conventions<a href="#naming-conventions" class="hash-link" aria-label="Direct link to Naming Conventions" title="Direct link to Naming Conventions">​</a></h3>
+<ul>
+<li>File Names: Use kebab-case or snake_case for file names.</li>
+<li>Variable and Function Names: Follow language-specific naming conventions.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="folder-structure-best-practices">Folder Structure Best Practices<a href="#folder-structure-best-practices" class="hash-link" aria-label="Direct link to Folder Structure Best Practices" title="Direct link to Folder Structure Best Practices">​</a></h3>
+<ul>
+<li>Feature-Based Organization: Group files by feature or module.</li>
+<li>Separation of Concerns: Separate components, styles, and utilities.</li>
+<li>Static Assets: Use a <code>static/</code> or <code>assets/</code> folder for images and fonts.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pre-commit-hooks-and-best-practices">Pre-Commit Hooks and Best Practices<a href="#pre-commit-hooks-and-best-practices" class="hash-link" aria-label="Direct link to Pre-Commit Hooks and Best Practices" title="Direct link to Pre-Commit Hooks and Best Practices">​</a></h2>
+<ul>
+<li>Adhere to pre-commit hooks defined in the codebase.</li>
+<li>Follow language-specific best practices to maintain code quality.</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/nvgr-GenAI/my-notes/edit/main/docs/templates/feature-development-pattern.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#context" class="table-of-contents__link toc-highlight">Context</a></li><li><a href="#documentation" class="table-of-contents__link toc-highlight">Documentation</a></li><li><a href="#software-developer-and-copilot-working-together" class="table-of-contents__link toc-highlight">Software Developer and Copilot Working Together</a></li><li><a href="#roles-and-responsibilities" class="table-of-contents__link toc-highlight">Roles and Responsibilities</a><ul><li><a href="#software-engineers-role" class="table-of-contents__link toc-highlight">Software Engineer&#39;s Role</a></li><li><a href="#copilots-role" class="table-of-contents__link toc-highlight">Copilot&#39;s Role</a></li></ul></li><li><a href="#general-pattern" class="table-of-contents__link toc-highlight">General Pattern</a></li><li><a href="#refining-the-intro-file" class="table-of-contents__link toc-highlight">Refining the Intro File</a></li><li><a href="#post-milestone-completion" class="table-of-contents__link toc-highlight">Post Milestone Completion</a></li><li><a href="#post-feature-completion" class="table-of-contents__link toc-highlight">Post Feature Completion</a></li><li><a href="#commit-messages" class="table-of-contents__link toc-highlight">Commit Messages</a></li><li><a href="#review-and-approval-process" class="table-of-contents__link toc-highlight">Review and Approval Process</a></li><li><a href="#documentation-updates" class="table-of-contents__link toc-highlight">Documentation Updates</a></li><li><a href="#implementation-phase" class="table-of-contents__link toc-highlight">Implementation Phase</a></li><li><a href="#communication-and-collaboration" class="table-of-contents__link toc-highlight">Communication and Collaboration</a></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a><ul><li><a href="#commit-best-practices" class="table-of-contents__link toc-highlight">Commit Best Practices</a></li><li><a href="#pull-request-best-practices" class="table-of-contents__link toc-highlight">Pull Request Best Practices</a></li><li><a href="#naming-conventions" class="table-of-contents__link toc-highlight">Naming Conventions</a></li><li><a href="#folder-structure-best-practices" class="table-of-contents__link toc-highlight">Folder Structure Best Practices</a></li></ul></li><li><a href="#pre-commit-hooks-and-best-practices" class="table-of-contents__link toc-highlight">Pre-Commit Hooks and Best Practices</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docusaurus</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/my-notes/docs/intro">Tutorial</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/in/vnakka/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/NVGR" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 My Notes, Inc. Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>
