@@ -6,7 +6,7 @@ This repository contains my personal notes and documentation built using Docusau
 
 The site is deployed on GitHub Pages and can be accessed at:
 
-[https://nvgr.github.io/my-notes](https://nvgr.github.io/my-notes)
+[https://nvgr-GenAI.github.io/my-notes](https://nvgr.github.io/my-notes)
 
 ## Development
 
