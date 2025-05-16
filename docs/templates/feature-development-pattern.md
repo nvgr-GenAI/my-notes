@@ -17,7 +17,7 @@ A software developer is going to be working in concert with Copilot to implement
 - Feature documentation structure: `.copilot/feat/US[ticket-number]-[feature-name]/`
   - `intro.md`: Feature introduction and context.
     - Create place holder sections like Introduction, Goal, Context, Implementation Guidelines, Dependcies
-  Detailed implementation milestones.
+  - `implementation-plan.md`: Detailed implementation milestones.
     - Each milestone will include a section describing the expected outcome.
     - The implementation plan is high level.
     - The implementation plan should not contain code, technical specifications, or directory structures. Prose only.
@@ -115,7 +115,6 @@ Copilot manages the code. This pattern is single writer and Copilot is the write
 
 - Atomic Commits: Each commit represents a single logical change.
 - Descriptive Commit Messages: Explain the "why" behind the change.
-<!-- - Sign Commits: Use GPG-signed commits for added security. -->
 
 ### Pull Request Best Practices
 
