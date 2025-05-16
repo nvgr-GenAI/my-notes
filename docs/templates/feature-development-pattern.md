@@ -17,7 +17,7 @@ A software developer is going to be working in concert with Copilot to implement
 - Feature documentation structure: `.copilot/feat/US[ticket-number]-[feature-name]/`
   - `intro.md`: Feature introduction and context.
     - Create place holder sections like Introduction, Goal, Context, Implementation Guidelines, Dependcies
-  Detailed implementation milestones.
+  - `implementation-plan.md`: Detailed implementation milestones.
     - Each milestone will include a section describing the expected outcome.
     - The implementation plan is high level.
     - The implementation plan should not contain code, technical specifications, or directory structures. Prose only.
@@ -50,22 +50,25 @@ Copilot manages the code. This pattern is single writer and Copilot is the write
 
 ## General Pattern
 
-1. Copilot creates the docs for the new feature.
+1. Copilot creates the docs(`intro.md`, `implementation-paln.md`, `implementation-progress.md`) for the new feature.
 2. The software engineer writes the intro file.
-3. Copilot checks its understanding of the intro file with the software engineer until consensus is reached.
-4. Copilot creates an implementation plan document.
-5. The software engineer reviews the implementation plan and provides feedback.
-6. The software engineer and Copilot work together to refine the implementation plan until the software engineer is satisfied with the plan.
-7. Copilot waits for explicit approval from the software engineer before starting the implementation of any milestone.
-8. Copilot begins implementation work, starting with the first milestone.
-9. Copilot runs builds and tests to verify the correctness of its changes.
-10. After Copilot finishes implementation, the software engineer checks the code and application.
-11. The software engineer provides feedback to Copilot.
-12. Copilot makes updates to the implementation based on the software engineer's feedback.
-13. The software engineer and Copilot continue the milestone refinement cycle until the software engineer is satisfied.
-14. The milestone is considered complete and Copilot updates the implementation progress and lessons learned docs.
-15. At the software engineer's direction, Copilot begins work on the next milestone.
-16. This pattern continues until all milestones are complete.
+3. The software engineer can take copilot help to refine the intro file.
+4. Copilot checks its understanding of the intro file with the software engineer until consensus is reached.
+5. Copilot creates an implementation plan document.
+6. The software engineer reviews the implementation plan and provides feedback.
+7. The software engineer and Copilot work together to refine the implementation plan until the software engineer is satisfied with the plan.
+8. Copilot waits for explicit approval from the software engineer before starting the implementation of any milestone.
+9. Copilot begins implementation work, starting with the first milestone.
+10. Copilot runs builds and tests to verify the correctness of its changes.
+11. After Copilot finishes implementation, the software engineer checks the code and application.
+12. The software engineer provides feedback to Copilot.
+13. Copilot makes updates to the implementation based on the software engineer's feedback.
+14. The software engineer and Copilot continue the milestone refinement cycle until the software engineer is satisfied.
+15. The milestone is considered complete and Copilot updates the implementation progress and lessons learned docs.
+16. At the software engineer's direction, Copilot begins work on the next milestone.
+17. This pattern continues until all milestones are complete.
+18. The software engineer can ask copilot to generate pullrequest summary after completion of a milestone or entire feature.
+19. Copilot will generate pullrequest summary by taking pr template reference or create one based on best practices.
 
 ## Refining the Intro File
 
@@ -88,6 +91,21 @@ Copilot manages the code. This pattern is single writer and Copilot is the write
 ## Commit Messages
 
 - Use Conventional Commits for all commit messages.
+
+## MCP Git Integration
+
+- The Model Context Protocol (MCP) server can help manage git operations without requiring manual command execution.
+- MCP Git operations allow Copilot to:
+  - Create and manage branches
+  - Commit changes directly to repositories
+  - Create pull requests
+  - Review commit history
+- These operations enhance collaboration between the software engineer and Copilot by streamlining version control tasks.
+- Benefits include:
+  - Reduced context switching
+  - Consistent commit message formatting
+  - Enhanced tracking of implementation progress
+  - Seamless PR creation
 
 ## Review and Approval Process
 
@@ -115,7 +133,6 @@ Copilot manages the code. This pattern is single writer and Copilot is the write
 
 - Atomic Commits: Each commit represents a single logical change.
 - Descriptive Commit Messages: Explain the "why" behind the change.
-<!-- - Sign Commits: Use GPG-signed commits for added security. -->
 
 ### Pull Request Best Practices
 
