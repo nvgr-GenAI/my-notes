@@ -70,6 +70,20 @@ Copilot manages the code. This pattern is single writer and Copilot is the write
 18. The software engineer can ask copilot to generate pullrequest summary after completion of a milestone or entire feature.
 19. Copilot will generate pullrequest summary by taking pr template reference or create one based on best practices.
 
+## MCP Git Integration Best Practices
+
+When using Model Context Protocol (MCP) for Git operations, it's important to follow these best practices to avoid conflicts:
+
+- **Synchronize Before MCP Operations**: Always pull the latest changes from remote before asking Copilot to perform Git operations through MCP.
+- **Clear Workflow Separation**: Decide whether a specific feature/change will be managed through local Git commands or MCP, not both simultaneously.
+- **Local-First vs. Remote-First**: 
+  - Local-First: Make changes locally and push them manually (traditional Git workflow)
+  - Remote-First: Let MCP handle the Git operations directly on the remote repository
+- **Avoid Parallel Work**: Don't make local changes to files while also having MCP modify the same files remotely.
+- **Pull After MCP Operations**: After MCP performs Git operations (branch creation, commits, etc.), always pull changes to synchronize your local repository.
+- **Communication Protocol**: Document whether a branch is being managed via MCP or local Git to avoid confusion among team members.
+- **Branch Ownership**: Designate certain branches to be managed exclusively via one method (MCP or local Git).
+
 ## Refining the Intro File
 
 - After the initial writing of the `intro.md` file, the software engineer can take help from Copilot to refine the file with more technical details.
@@ -91,21 +105,6 @@ Copilot manages the code. This pattern is single writer and Copilot is the write
 ## Commit Messages
 
 - Use Conventional Commits for all commit messages.
-
-## MCP Git Integration
-
-- The Model Context Protocol (MCP) server can help manage git operations without requiring manual command execution.
-- MCP Git operations allow Copilot to:
-  - Create and manage branches
-  - Commit changes directly to repositories
-  - Create pull requests
-  - Review commit history
-- These operations enhance collaboration between the software engineer and Copilot by streamlining version control tasks.
-- Benefits include:
-  - Reduced context switching
-  - Consistent commit message formatting
-  - Enhanced tracking of implementation progress
-  - Seamless PR creation
 
 ## Review and Approval Process
 
