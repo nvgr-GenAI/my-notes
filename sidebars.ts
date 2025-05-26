@@ -23,11 +23,39 @@ const sidebars: SidebarsConfig = {
   ],
   mlSidebar: [
     'ml/index', // Added index.md as the first document for ML
+    'ml/development-lifecycle', // Added ML Development Lifecycle page
     {
       type: 'category',
       label: 'Supervised Learning',
       items: [
         'ml/supervised/intro',
+        {
+          type: 'category',
+          label: 'Regression Algorithms',
+          items: [
+            'ml/supervised/linear-regression',
+            'ml/supervised/polynomial-regression',
+            'ml/supervised/ridge-regression',
+            'ml/supervised/lasso-regression',
+            'ml/supervised/decision-tree-regression',
+            'ml/supervised/random-forest-regression',
+            'ml/supervised/svm-regression',
+            'ml/supervised/neural-networks-regression',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Classification Algorithms',
+          items: [
+            'ml/supervised/logistic-regression',
+            'ml/supervised/decision-tree-classification',
+            'ml/supervised/random-forest-classification',
+            'ml/supervised/naive-bayes',
+            'ml/supervised/k-nearest-neighbors',
+            'ml/supervised/svm-classification',
+            'ml/supervised/neural-networks-classification',
+          ]
+        },
         'ml/supervised/examples',
       ],
     },
@@ -41,12 +69,21 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Semi-supervised Learning',
+      items: [
+        'ml/semi-supervised/intro',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Reinforcement Learning',
       items: [
         'ml/reinforcement/intro',
         'ml/reinforcement/examples',
       ],
     },
+    'ml/tools-frameworks', // Added Tools and Frameworks page
+    'ml/industry-applications', // Moved Industry Applications page to the bottom
   ],
   genaiSidebar: [
     'genai/index',
