@@ -132,21 +132,25 @@ print(f"Final model - MSE: {mse:.4f}, R²: {r2:.4f}")
 
 ## Kernel Functions
 
-1. **Linear**: $K(x_i, x_j) = x_i^T x_j$
+1. **Linear**: 
+   <div class="math">K(x<sub>i</sub>, x<sub>j</sub>) = x<sub>i</sub><sup>T</sup> x<sub>j</sub></div>
    - Suitable for linearly separable data
    
-2. **Polynomial**: $K(x_i, x_j) = (γx_i^T x_j + r)^d$
+2. **Polynomial**: 
+   <div class="math">K(x<sub>i</sub>, x<sub>j</sub>) = (γx<sub>i</sub><sup>T</sup> x<sub>j</sub> + r)<sup>d</sup></div>
    - Good for non-linear relationships
-   - Parameters: degree $d$, gamma $γ$, and coefficient $r$
+   - Parameters: degree d, gamma γ, and coefficient r
    
-3. **RBF (Radial Basis Function)**: $K(x_i, x_j) = exp(-γ||x_i - x_j||^2)$
+3. **RBF (Radial Basis Function)**: 
+   <div class="math">K(x<sub>i</sub>, x<sub>j</sub>) = exp(-γ||x<sub>i</sub> - x<sub>j</sub>||<sup>2</sup>)</div>
    - Most commonly used kernel for non-linear relationships
    - Works well for most datasets
-   - Parameter: gamma $γ$ controls the influence of training examples
+   - Parameter: gamma γ controls the influence of training examples
    
-4. **Sigmoid**: $K(x_i, x_j) = tanh(γx_i^T x_j + r)$
+4. **Sigmoid**: 
+   <div class="math">K(x<sub>i</sub>, x<sub>j</sub>) = tanh(γx<sub>i</sub><sup>T</sup> x<sub>j</sub> + r)</div>
    - Related to neural networks
-   - Parameters: gamma $γ$ and coefficient $r$
+   - Parameters: gamma γ and coefficient r
 
 ## Hyperparameters
 
