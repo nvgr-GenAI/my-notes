@@ -6,14 +6,16 @@ Ridge Regression is a regularized version of **Linear Regression** that adds an 
 
 Ridge Regression minimizes the following objective function:
 
-$$ \min_{\beta} \sum_{i=1}^{n}(y_i - \beta_0 - \sum_{j=1}^{p}\beta_j x_{ij})^2 + \lambda \sum_{j=1}^{p}\beta_j^2 $$
+<div class="math">
+min<sub>β</sub> Σ<sub>i=1</sub><sup>n</sup>(y<sub>i</sub> - β<sub>0</sub> - Σ<sub>j=1</sub><sup>p</sup>β<sub>j</sub>x<sub>ij</sub>)<sup>2</sup> + λΣ<sub>j=1</sub><sup>p</sup>β<sub>j</sub><sup>2</sup>
+</div>
 
 Where:
-- $y_i$ is the target variable
-- $x_{ij}$ are the features
-- $\beta_0, \beta_j$ are the coefficients
-- $\lambda$ is the regularization parameter
-- The term $\lambda \sum_{j=1}^{p}\beta_j^2$ is the L2 regularization penalty
+- y<sub>i</sub> is the target variable
+- x<sub>ij</sub> are the features
+- β<sub>0</sub>, β<sub>j</sub> are the coefficients
+- λ is the regularization parameter
+- The term λΣ<sub>j=1</sub><sup>p</sup>β<sub>j</sub><sup>2</sup> is the L2 regularization penalty
 
 ## Advantages
 

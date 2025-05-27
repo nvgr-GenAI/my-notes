@@ -31,6 +31,10 @@ const config: Config = {
     locales: ['en'],
   },
 
+  plugins: [
+    './plugins/math-plugin',
+  ],
+
   presets: [
     [
       'classic',
@@ -52,6 +56,16 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
+  ],
+
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-vZTG03mC26gY2vDfo3CvXfQfFz38SBcBvIRVJyhtRZf5V1dYy5x1PfaIQHx6dK+0',
+      crossorigin: 'anonymous',
+    },
   ],
 
   themeConfig: {
