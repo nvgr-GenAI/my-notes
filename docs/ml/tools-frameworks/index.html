@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ml/tools-frameworks" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">ML Tools and Frameworks | My Site</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://your-docusaurus-site.example.com/my-notes/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://your-docusaurus-site.example.com/my-notes/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/my-notes/docs/ml/tools-frameworks"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="ML Tools and Frameworks | My Site"><meta data-rh="true" name="description" content="This guide provides an overview of the most important tools and frameworks used across different stages of the machine learning lifecycle."><meta data-rh="true" property="og:description" content="This guide provides an overview of the most important tools and frameworks used across different stages of the machine learning lifecycle."><link data-rh="true" rel="icon" href="/my-notes/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/my-notes/docs/ml/tools-frameworks"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/my-notes/docs/ml/tools-frameworks" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/my-notes/docs/ml/tools-frameworks" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/my-notes/blog/rss.xml" title="My Site RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/my-notes/blog/atom.xml" title="My Site Atom Feed">
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vZTG03mC26gY2vDfo3CvXfQfFz38SBcBvIRVJyhtRZf5V1dYy5x1PfaIQHx6dK+0" crossorigin="anonymous"><link rel="stylesheet" href="/my-notes/assets/css/styles.079a67db.css">
+<script src="/my-notes/assets/js/runtime~main.1c186aad.js" defer="defer"></script>
+<script src="/my-notes/assets/js/main.f29717f2.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/my-notes/"><div class="navbar__logo"><img src="/my-notes/img/logo.svg" alt="My Site Logo" class="themedComponent__dKv themedComponent--light_rzkv"><img src="/my-notes/img/logo.svg" alt="My Site Logo" class="themedComponent__dKv themedComponent--dark_mMAk"></div><b class="navbar__title text--truncate">My Notes</b></a><a class="navbar__item navbar__link" href="/my-notes/docs/algorithms">Algorithms</a><a class="navbar__item navbar__link" href="/my-notes/docs/copilot">Copilot</a><a class="navbar__item navbar__link" href="/my-notes/docs/genai">GenAI</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/my-notes/docs/ml">ML</a><a class="navbar__item navbar__link" href="/my-notes/docs/systemdesign">System Design</a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/my-notes/blog">Blogs</a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/my-notes/docs/ml/">Machine Learning (ML)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/my-notes/docs/ml/development-lifecycle">Machine Learning Development Lifecycle</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/my-notes/docs/ml/supervised/intro">Supervised Learning</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/my-notes/docs/ml/unsupervised/intro">Unsupervised Learning</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/my-notes/docs/ml/semi-supervised/intro">Semi-supervised Learning</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/my-notes/docs/ml/reinforcement/intro">Reinforcement Learning</a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/my-notes/docs/ml/tools-frameworks">ML Tools and Frameworks</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/my-notes/docs/ml/industry-applications">Machine Learning Industry Applications</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/my-notes/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">ML Tools and Frameworks</span><meta itemprop="position" content="1"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Machine Learning Tools and Frameworks</h1></header>
+<p>This guide provides an overview of the most important tools and frameworks used across different stages of the machine learning lifecycle.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="data-management">Data Management<a href="#data-management" class="hash-link" aria-label="Direct link to Data Management" title="Direct link to Data Management">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="dvc-data-version-control"><a href="https://dvc.org/" target="_blank" rel="noopener noreferrer">DVC (Data Version Control)</a><a href="#dvc-data-version-control" class="hash-link" aria-label="Direct link to dvc-data-version-control" title="Direct link to dvc-data-version-control">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Version control for machine learning data and models</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Git-like interface for data versioning</li>
+<li>Storage agnostic (works with S3, GCP, Azure, etc.)</li>
+<li>Pipeline tracking and reproducibility</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: ML teams needing reproducible experiments and data versioning</li>
+<li><strong>Language Support</strong>: Language agnostic, CLI-based with Python API</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="delta-lake"><a href="https://delta.io/" target="_blank" rel="noopener noreferrer">Delta Lake</a><a href="#delta-lake" class="hash-link" aria-label="Direct link to delta-lake" title="Direct link to delta-lake">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Storage layer for building reliable data lakes</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>ACID transactions on data lakes</li>
+<li>Schema enforcement and evolution</li>
+<li>Time travel (data versioning)</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Big data environments requiring reliability and performance</li>
+<li><strong>Language Support</strong>: Spark, Python, Java</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="feast-feature-store"><a href="https://feast.dev/" target="_blank" rel="noopener noreferrer">Feast (Feature Store)</a><a href="#feast-feature-store" class="hash-link" aria-label="Direct link to feast-feature-store" title="Direct link to feast-feature-store">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Feature store for machine learning</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Centralized feature repository</li>
+<li>Feature serving for online and offline use cases</li>
+<li>Consistent feature transformations</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Large ML systems requiring consistent feature definitions</li>
+<li><strong>Language Support</strong>: Python, Java</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pandas"><a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer">Pandas</a><a href="#pandas" class="hash-link" aria-label="Direct link to pandas" title="Direct link to pandas">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Data manipulation and analysis</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>DataFrame object for data manipulation</li>
+<li>Powerful indexing and selection</li>
+<li>Time series functionality</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Data preprocessing, cleaning, and exploration</li>
+<li><strong>Language Support</strong>: Python</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="experiment-tracking">Experiment Tracking<a href="#experiment-tracking" class="hash-link" aria-label="Direct link to Experiment Tracking" title="Direct link to Experiment Tracking">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="mlflow"><a href="https://mlflow.org/" target="_blank" rel="noopener noreferrer">MLflow</a><a href="#mlflow" class="hash-link" aria-label="Direct link to mlflow" title="Direct link to mlflow">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: End-to-end ML lifecycle platform</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Experiment tracking</li>
+<li>Model packaging</li>
+<li>Model registry</li>
+<li>Model deployment</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Teams needing complete ML lifecycle management</li>
+<li><strong>Language Support</strong>: Python, R, Java, REST API</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="weights--biases"><a href="https://wandb.ai/" target="_blank" rel="noopener noreferrer">Weights &amp; Biases</a><a href="#weights--biases" class="hash-link" aria-label="Direct link to weights--biases" title="Direct link to weights--biases">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Experiment tracking and visualization</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Experiment tracking</li>
+<li>Hyperparameter optimization</li>
+<li>Model visualization</li>
+<li>Collaboration tools</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Teams focusing on deep learning with advanced visualization needs</li>
+<li><strong>Language Support</strong>: Python, most ML frameworks</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tensorboard"><a href="https://www.tensorflow.org/tensorboard" target="_blank" rel="noopener noreferrer">TensorBoard</a><a href="#tensorboard" class="hash-link" aria-label="Direct link to tensorboard" title="Direct link to tensorboard">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Visualization tool for TensorFlow</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Training metrics visualization</li>
+<li>Model graph visualization</li>
+<li>Embedding projections</li>
+<li>Image, audio, and text visualization</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: TensorFlow users requiring detailed visual insights</li>
+<li><strong>Language Support</strong>: TensorFlow (Python)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="neptune"><a href="https://neptune.ai/" target="_blank" rel="noopener noreferrer">Neptune</a><a href="#neptune" class="hash-link" aria-label="Direct link to neptune" title="Direct link to neptune">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Metadata store for MLOps</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Experiment tracking</li>
+<li>Model registry</li>
+<li>Monitoring</li>
+<li>Team collaboration</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Teams needing sophisticated metadata tracking</li>
+<li><strong>Language Support</strong>: Python, R</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="model-development">Model Development<a href="#model-development" class="hash-link" aria-label="Direct link to Model Development" title="Direct link to Model Development">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scikit-learn"><a href="https://scikit-learn.org/" target="_blank" rel="noopener noreferrer">scikit-learn</a><a href="#scikit-learn" class="hash-link" aria-label="Direct link to scikit-learn" title="Direct link to scikit-learn">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Machine learning library for classical algorithms</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Comprehensive classical ML algorithms</li>
+<li>Data preprocessing tools</li>
+<li>Model evaluation metrics</li>
+<li>Pipeline construction</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Traditional ML problems and quick prototyping</li>
+<li><strong>Language Support</strong>: Python</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tensorflow"><a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer">TensorFlow</a><a href="#tensorflow" class="hash-link" aria-label="Direct link to tensorflow" title="Direct link to tensorflow">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: End-to-end deep learning platform</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Static computational graph</li>
+<li>Production deployment tools</li>
+<li>TensorFlow Extended (TFX) for production ML pipelines</li>
+<li>TensorFlow Lite for mobile and edge deployment</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Large-scale industrial deep learning applications</li>
+<li><strong>Language Support</strong>: Python, JavaScript, C++, Java, Go</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="keras"><a href="https://keras.io/" target="_blank" rel="noopener noreferrer">Keras</a><a href="#keras" class="hash-link" aria-label="Direct link to keras" title="Direct link to keras">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: High-level neural networks API</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>User-friendly interface</li>
+<li>Rapid prototyping</li>
+<li>Runs on top of TensorFlow, Theano, or CNTK</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Fast deep learning model development and prototyping</li>
+<li><strong>Language Support</strong>: Python</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pytorch"><a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer">PyTorch</a><a href="#pytorch" class="hash-link" aria-label="Direct link to pytorch" title="Direct link to pytorch">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Deep learning framework with dynamic computation graphs</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Dynamic computational graph</li>
+<li>Pythonic interface</li>
+<li>Strong GPU acceleration</li>
+<li>Rich ecosystem (PyTorch Lightning, FastAI)</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Research, prototyping, and academic environments</li>
+<li><strong>Language Support</strong>: Python, C++</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hugging-face-transformers"><a href="https://huggingface.co/transformers/" target="_blank" rel="noopener noreferrer">Hugging Face Transformers</a><a href="#hugging-face-transformers" class="hash-link" aria-label="Direct link to hugging-face-transformers" title="Direct link to hugging-face-transformers">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: State-of-the-art NLP models</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Pre-trained language models</li>
+<li>Fine-tuning capabilities</li>
+<li>Model sharing and collaboration</li>
+<li>Integration with TensorFlow and PyTorch</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: NLP tasks and transfer learning</li>
+<li><strong>Language Support</strong>: Python</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="xgboost"><a href="https://xgboost.ai/" target="_blank" rel="noopener noreferrer">XGBoost</a><a href="#xgboost" class="hash-link" aria-label="Direct link to xgboost" title="Direct link to xgboost">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Gradient boosting framework</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Gradient boosting algorithms</li>
+<li>Optimized for performance</li>
+<li>Handles missing values</li>
+<li>Regularization to prevent overfitting</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Structured/tabular data problems</li>
+<li><strong>Language Support</strong>: Python, R, Java, C++</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="feature-engineering">Feature Engineering<a href="#feature-engineering" class="hash-link" aria-label="Direct link to Feature Engineering" title="Direct link to Feature Engineering">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="feature-engine"><a href="https://feature-engine.readthedocs.io/" target="_blank" rel="noopener noreferrer">Feature-engine</a><a href="#feature-engine" class="hash-link" aria-label="Direct link to feature-engine" title="Direct link to feature-engine">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Feature engineering and selection</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Various encoding techniques</li>
+<li>Missing data imputation</li>
+<li>Feature selection methods</li>
+<li>Compatible with scikit-learn pipelines</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Streamlined feature engineering workflows</li>
+<li><strong>Language Support</strong>: Python</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tsfresh"><a href="https://tsfresh.readthedocs.io/" target="_blank" rel="noopener noreferrer">tsfresh</a><a href="#tsfresh" class="hash-link" aria-label="Direct link to tsfresh" title="Direct link to tsfresh">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Time series feature extraction</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Automatic extraction of time series features</li>
+<li>Feature selection</li>
+<li>Scalable implementation</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Time series classification and regression</li>
+<li><strong>Language Support</strong>: Python</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="featuretools"><a href="https://www.featuretools.com/" target="_blank" rel="noopener noreferrer">Featuretools</a><a href="#featuretools" class="hash-link" aria-label="Direct link to featuretools" title="Direct link to featuretools">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Automated feature engineering</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Deep feature synthesis</li>
+<li>Automated feature generation</li>
+<li>Entity-relationship understanding</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Relational and transactional data</li>
+<li><strong>Language Support</strong>: Python</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="model-deployment">Model Deployment<a href="#model-deployment" class="hash-link" aria-label="Direct link to Model Deployment" title="Direct link to Model Deployment">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tensorflow-serving"><a href="https://www.tensorflow.org/tfx/guide/serving" target="_blank" rel="noopener noreferrer">TensorFlow Serving</a><a href="#tensorflow-serving" class="hash-link" aria-label="Direct link to tensorflow-serving" title="Direct link to tensorflow-serving">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Serving TensorFlow models in production</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Model versioning</li>
+<li>High-performance serving</li>
+<li>RESTful and gRPC APIs</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Serving TensorFlow models at scale</li>
+<li><strong>Language Support</strong>: Model-agnostic, client libraries in multiple languages</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="torchserve"><a href="https://pytorch.org/serve/" target="_blank" rel="noopener noreferrer">TorchServe</a><a href="#torchserve" class="hash-link" aria-label="Direct link to torchserve" title="Direct link to torchserve">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Serving PyTorch models in production</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Model versioning</li>
+<li>Metrics and logging</li>
+<li>RESTful API</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Serving PyTorch models</li>
+<li><strong>Language Support</strong>: Model-agnostic, Python client</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="onnx-open-neural-network-exchange"><a href="https://onnx.ai/" target="_blank" rel="noopener noreferrer">ONNX (Open Neural Network Exchange)</a><a href="#onnx-open-neural-network-exchange" class="hash-link" aria-label="Direct link to onnx-open-neural-network-exchange" title="Direct link to onnx-open-neural-network-exchange">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Open standard for ML interoperability</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Framework interoperability</li>
+<li>Hardware optimization</li>
+<li>Runtime support across platforms</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Cross-platform model deployment</li>
+<li><strong>Language Support</strong>: Multiple languages and frameworks</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="bentoml"><a href="https://www.bentoml.com/" target="_blank" rel="noopener noreferrer">BentoML</a><a href="#bentoml" class="hash-link" aria-label="Direct link to bentoml" title="Direct link to bentoml">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Unified model serving framework</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Framework-agnostic serving</li>
+<li>Containerization</li>
+<li>API server generation</li>
+<li>Model management</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Standardized model deployment across frameworks</li>
+<li><strong>Language Support</strong>: Python, with API access from any language</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="monitoring">Monitoring<a href="#monitoring" class="hash-link" aria-label="Direct link to Monitoring" title="Direct link to Monitoring">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="evidently-ai"><a href="https://www.evidentlyai.com/" target="_blank" rel="noopener noreferrer">Evidently AI</a><a href="#evidently-ai" class="hash-link" aria-label="Direct link to evidently-ai" title="Direct link to evidently-ai">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: ML model monitoring and evaluation</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Data drift detection</li>
+<li>Model performance monitoring</li>
+<li>Interactive visual reports</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Model monitoring and troubleshooting</li>
+<li><strong>Language Support</strong>: Python</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="seldon-core"><a href="https://www.seldon.io/solutions/open-source-projects/core" target="_blank" rel="noopener noreferrer">Seldon Core</a><a href="#seldon-core" class="hash-link" aria-label="Direct link to seldon-core" title="Direct link to seldon-core">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Model deployment and monitoring on Kubernetes</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>A/B testing and canary deployments</li>
+<li>Monitoring and explainability</li>
+<li>Advanced routing</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Enterprise-grade ML deployments on Kubernetes</li>
+<li><strong>Language Support</strong>: Multiple languages supported</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="prometheus"><a href="https://prometheus.io/" target="_blank" rel="noopener noreferrer">Prometheus</a><a href="#prometheus" class="hash-link" aria-label="Direct link to prometheus" title="Direct link to prometheus">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Monitoring and alerting toolkit</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Time series data collection</li>
+<li>Alerting</li>
+<li>Visualization via Grafana integration</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: System and application metrics monitoring</li>
+<li><strong>Language Support</strong>: Multiple client libraries available</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="grafana"><a href="https://grafana.com/" target="_blank" rel="noopener noreferrer">Grafana</a><a href="#grafana" class="hash-link" aria-label="Direct link to grafana" title="Direct link to grafana">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Analytics and monitoring visualization</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Interactive dashboards</li>
+<li>Alerts</li>
+<li>Multiple data source support</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Creating dashboards for ML system monitoring</li>
+<li><strong>Language Support</strong>: Multiple data sources</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="workflow-orchestration">Workflow Orchestration<a href="#workflow-orchestration" class="hash-link" aria-label="Direct link to Workflow Orchestration" title="Direct link to Workflow Orchestration">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="kubeflow"><a href="https://www.kubeflow.org/" target="_blank" rel="noopener noreferrer">Kubeflow</a><a href="#kubeflow" class="hash-link" aria-label="Direct link to kubeflow" title="Direct link to kubeflow">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: ML toolkit for Kubernetes</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>End-to-end ML workflows</li>
+<li>Notebook environments</li>
+<li>Model training and serving</li>
+<li>Pipeline orchestration</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Enterprise ML workflows on Kubernetes</li>
+<li><strong>Language Support</strong>: Multiple languages, Kubernetes-native</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="apache-airflow"><a href="https://airflow.apache.org/" target="_blank" rel="noopener noreferrer">Apache Airflow</a><a href="#apache-airflow" class="hash-link" aria-label="Direct link to apache-airflow" title="Direct link to apache-airflow">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Workflow orchestration platform</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>DAG-based workflow definition</li>
+<li>Extensible operators</li>
+<li>Scheduling and monitoring</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Complex data processing and ML workflows</li>
+<li><strong>Language Support</strong>: Python for DAG definition, can execute any code</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="argo-workflows"><a href="https://argoproj.github.io/workflows/" target="_blank" rel="noopener noreferrer">Argo Workflows</a><a href="#argo-workflows" class="hash-link" aria-label="Direct link to argo-workflows" title="Direct link to argo-workflows">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Kubernetes-native workflow engine</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Container-native workflows</li>
+<li>DAG and step-based workflows</li>
+<li>Artifact management</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Compute-intensive ML workflows on Kubernetes</li>
+<li><strong>Language Support</strong>: YAML/JSON for workflow definition, can run any container</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="prefect"><a href="https://www.prefect.io/" target="_blank" rel="noopener noreferrer">Prefect</a><a href="#prefect" class="hash-link" aria-label="Direct link to prefect" title="Direct link to prefect">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Dataflow automation platform</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Dynamic workflows</li>
+<li>Failure handling</li>
+<li>Observability</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Data-driven workflows with complex dependencies</li>
+<li><strong>Language Support</strong>: Python</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="specialized-tools">Specialized Tools<a href="#specialized-tools" class="hash-link" aria-label="Direct link to Specialized Tools" title="Direct link to Specialized Tools">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="optuna"><a href="https://optuna.org/" target="_blank" rel="noopener noreferrer">Optuna</a><a href="#optuna" class="hash-link" aria-label="Direct link to optuna" title="Direct link to optuna">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Hyperparameter optimization</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Efficient search algorithms</li>
+<li>Dashboard for visualization</li>
+<li>Distributed optimization</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Automated hyperparameter tuning</li>
+<li><strong>Language Support</strong>: Python</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ray"><a href="https://www.ray.io/" target="_blank" rel="noopener noreferrer">Ray</a><a href="#ray" class="hash-link" aria-label="Direct link to ray" title="Direct link to ray">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Distributed computing framework</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Distributed training</li>
+<li>Hyperparameter tuning</li>
+<li>Reinforcement learning</li>
+<li>Serving</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Scaling ML workloads across clusters</li>
+<li><strong>Language Support</strong>: Python</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="shap-shapley-additive-explanations"><a href="https://shap.readthedocs.io/" target="_blank" rel="noopener noreferrer">SHAP (SHapley Additive exPlanations)</a><a href="#shap-shapley-additive-explanations" class="hash-link" aria-label="Direct link to shap-shapley-additive-explanations" title="Direct link to shap-shapley-additive-explanations">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Model explainability</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Feature importance</li>
+<li>Local and global explanations</li>
+<li>Visualizations</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Understanding and explaining model decisions</li>
+<li><strong>Language Support</strong>: Python</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="label-studio"><a href="https://labelstud.io/" target="_blank" rel="noopener noreferrer">Label Studio</a><a href="#label-studio" class="hash-link" aria-label="Direct link to label-studio" title="Direct link to label-studio">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Data labeling</li>
+<li><strong>Key Features</strong>:<!-- -->
+<ul>
+<li>Multi-type annotation</li>
+<li>Active learning</li>
+<li>Integration with ML pipelines</li>
+</ul>
+</li>
+<li><strong>Best For</strong>: Data annotation for supervised learning</li>
+<li><strong>Language Support</strong>: Python backend, web-based UI</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="choosing-the-right-tools">Choosing the Right Tools<a href="#choosing-the-right-tools" class="hash-link" aria-label="Direct link to Choosing the Right Tools" title="Direct link to Choosing the Right Tools">​</a></h2>
+<p>When selecting tools for your ML projects, consider:</p>
+<ol>
+<li><strong>Project Scale</strong>: Small experimental projects have different needs than production systems.</li>
+<li><strong>Team Expertise</strong>: Choose tools aligned with your team&#x27;s skills.</li>
+<li><strong>Integration Requirements</strong>: Ensure compatibility with existing infrastructure.</li>
+<li><strong>Scalability Needs</strong>: Some tools handle large-scale workloads better than others.</li>
+<li><strong>Governance and Security</strong>: Enterprise environments may have specific requirements.</li>
+</ol>
+<p>The ML ecosystem continues to evolve rapidly, with new tools emerging regularly. Staying updated on the latest developments while focusing on tools that solve your specific problems will help you build effective ML systems.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/nvgr-GenAI/my-notes/edit/main/docs/ml/tools-frameworks.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/my-notes/docs/ml/reinforcement/examples"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Examples of Reinforcement Learning</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/my-notes/docs/ml/industry-applications"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Machine Learning Industry Applications</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#data-management" class="table-of-contents__link toc-highlight">Data Management</a><ul><li><a href="#dvc-data-version-control" class="table-of-contents__link toc-highlight">DVC (Data Version Control)</a></li><li><a href="#delta-lake" class="table-of-contents__link toc-highlight">Delta Lake</a></li><li><a href="#feast-feature-store" class="table-of-contents__link toc-highlight">Feast (Feature Store)</a></li><li><a href="#pandas" class="table-of-contents__link toc-highlight">Pandas</a></li></ul></li><li><a href="#experiment-tracking" class="table-of-contents__link toc-highlight">Experiment Tracking</a><ul><li><a href="#mlflow" class="table-of-contents__link toc-highlight">MLflow</a></li><li><a href="#weights--biases" class="table-of-contents__link toc-highlight">Weights &amp; Biases</a></li><li><a href="#tensorboard" class="table-of-contents__link toc-highlight">TensorBoard</a></li><li><a href="#neptune" class="table-of-contents__link toc-highlight">Neptune</a></li></ul></li><li><a href="#model-development" class="table-of-contents__link toc-highlight">Model Development</a><ul><li><a href="#scikit-learn" class="table-of-contents__link toc-highlight">scikit-learn</a></li><li><a href="#tensorflow" class="table-of-contents__link toc-highlight">TensorFlow</a></li><li><a href="#keras" class="table-of-contents__link toc-highlight">Keras</a></li><li><a href="#pytorch" class="table-of-contents__link toc-highlight">PyTorch</a></li><li><a href="#hugging-face-transformers" class="table-of-contents__link toc-highlight">Hugging Face Transformers</a></li><li><a href="#xgboost" class="table-of-contents__link toc-highlight">XGBoost</a></li></ul></li><li><a href="#feature-engineering" class="table-of-contents__link toc-highlight">Feature Engineering</a><ul><li><a href="#feature-engine" class="table-of-contents__link toc-highlight">Feature-engine</a></li><li><a href="#tsfresh" class="table-of-contents__link toc-highlight">tsfresh</a></li><li><a href="#featuretools" class="table-of-contents__link toc-highlight">Featuretools</a></li></ul></li><li><a href="#model-deployment" class="table-of-contents__link toc-highlight">Model Deployment</a><ul><li><a href="#tensorflow-serving" class="table-of-contents__link toc-highlight">TensorFlow Serving</a></li><li><a href="#torchserve" class="table-of-contents__link toc-highlight">TorchServe</a></li><li><a href="#onnx-open-neural-network-exchange" class="table-of-contents__link toc-highlight">ONNX (Open Neural Network Exchange)</a></li><li><a href="#bentoml" class="table-of-contents__link toc-highlight">BentoML</a></li></ul></li><li><a href="#monitoring" class="table-of-contents__link toc-highlight">Monitoring</a><ul><li><a href="#evidently-ai" class="table-of-contents__link toc-highlight">Evidently AI</a></li><li><a href="#seldon-core" class="table-of-contents__link toc-highlight">Seldon Core</a></li><li><a href="#prometheus" class="table-of-contents__link toc-highlight">Prometheus</a></li><li><a href="#grafana" class="table-of-contents__link toc-highlight">Grafana</a></li></ul></li><li><a href="#workflow-orchestration" class="table-of-contents__link toc-highlight">Workflow Orchestration</a><ul><li><a href="#kubeflow" class="table-of-contents__link toc-highlight">Kubeflow</a></li><li><a href="#apache-airflow" class="table-of-contents__link toc-highlight">Apache Airflow</a></li><li><a href="#argo-workflows" class="table-of-contents__link toc-highlight">Argo Workflows</a></li><li><a href="#prefect" class="table-of-contents__link toc-highlight">Prefect</a></li></ul></li><li><a href="#specialized-tools" class="table-of-contents__link toc-highlight">Specialized Tools</a><ul><li><a href="#optuna" class="table-of-contents__link toc-highlight">Optuna</a></li><li><a href="#ray" class="table-of-contents__link toc-highlight">Ray</a></li><li><a href="#shap-shapley-additive-explanations" class="table-of-contents__link toc-highlight">SHAP (SHapley Additive exPlanations)</a></li><li><a href="#label-studio" class="table-of-contents__link toc-highlight">Label Studio</a></li></ul></li><li><a href="#choosing-the-right-tools" class="table-of-contents__link toc-highlight">Choosing the Right Tools</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docusaurus</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/my-notes/docs/intro">Tutorial</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/in/vnakka/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/NVGR" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 My Notes, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

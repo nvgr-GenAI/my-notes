@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_notes=self.webpackChunkmy_notes||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"All Blog Posts","items":[{"title":"Introduction to GenAI","permalink":"/my-notes/blog/2025/05/12/genai-introduction","unlisted":false,"date":"2025-05-12T00:00:00.000Z"}]}')}}]);

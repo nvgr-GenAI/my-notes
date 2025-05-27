@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ml/development-lifecycle" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">Machine Learning Development Lifecycle | My Site</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://your-docusaurus-site.example.com/my-notes/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://your-docusaurus-site.example.com/my-notes/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/my-notes/docs/ml/development-lifecycle"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Machine Learning Development Lifecycle | My Site"><meta data-rh="true" name="description" content="The machine learning development lifecycle is a structured approach to building, deploying, and maintaining ML systems. Unlike traditional software development, ML projects require additional steps to handle data, train models, and ensure ongoing performance."><meta data-rh="true" property="og:description" content="The machine learning development lifecycle is a structured approach to building, deploying, and maintaining ML systems. Unlike traditional software development, ML projects require additional steps to handle data, train models, and ensure ongoing performance."><link data-rh="true" rel="icon" href="/my-notes/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/my-notes/docs/ml/development-lifecycle"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/my-notes/docs/ml/development-lifecycle" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/my-notes/docs/ml/development-lifecycle" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/my-notes/blog/rss.xml" title="My Site RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/my-notes/blog/atom.xml" title="My Site Atom Feed">
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vZTG03mC26gY2vDfo3CvXfQfFz38SBcBvIRVJyhtRZf5V1dYy5x1PfaIQHx6dK+0" crossorigin="anonymous"><link rel="stylesheet" href="/my-notes/assets/css/styles.079a67db.css">
+<script src="/my-notes/assets/js/runtime~main.1c186aad.js" defer="defer"></script>
+<script src="/my-notes/assets/js/main.f29717f2.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/my-notes/"><div class="navbar__logo"><img src="/my-notes/img/logo.svg" alt="My Site Logo" class="themedComponent__dKv themedComponent--light_rzkv"><img src="/my-notes/img/logo.svg" alt="My Site Logo" class="themedComponent__dKv themedComponent--dark_mMAk"></div><b class="navbar__title text--truncate">My Notes</b></a><a class="navbar__item navbar__link" href="/my-notes/docs/algorithms">Algorithms</a><a class="navbar__item navbar__link" href="/my-notes/docs/copilot">Copilot</a><a class="navbar__item navbar__link" href="/my-notes/docs/genai">GenAI</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/my-notes/docs/ml">ML</a><a class="navbar__item navbar__link" href="/my-notes/docs/systemdesign">System Design</a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/my-notes/blog">Blogs</a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/my-notes/docs/ml/">Machine Learning (ML)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/my-notes/docs/ml/development-lifecycle">Machine Learning Development Lifecycle</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/my-notes/docs/ml/supervised/intro">Supervised Learning</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/my-notes/docs/ml/unsupervised/intro">Unsupervised Learning</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/my-notes/docs/ml/semi-supervised/intro">Semi-supervised Learning</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/my-notes/docs/ml/reinforcement/intro">Reinforcement Learning</a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/my-notes/docs/ml/tools-frameworks">ML Tools and Frameworks</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/my-notes/docs/ml/industry-applications">Machine Learning Industry Applications</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/my-notes/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Machine Learning Development Lifecycle</span><meta itemprop="position" content="1"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Machine Learning Development Lifecycle</h1></header>
+<p>The machine learning development lifecycle is a structured approach to building, deploying, and maintaining ML systems. Unlike traditional software development, ML projects require additional steps to handle data, train models, and ensure ongoing performance.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-problem-definition">1. Problem Definition<a href="#1-problem-definition" class="hash-link" aria-label="Direct link to 1. Problem Definition" title="Direct link to 1. Problem Definition">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-activities">Key Activities<a href="#key-activities" class="hash-link" aria-label="Direct link to Key Activities" title="Direct link to Key Activities">​</a></h3>
+<ul>
+<li><strong>Business Problem Translation</strong>: Convert business requirements into a clear ML problem statement</li>
+<li><strong>Success Metric Definition</strong>: Establish quantifiable metrics to evaluate success</li>
+<li><strong>Feasibility Assessment</strong>: Determine if ML is the appropriate solution and if required data is available</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h3>
+<ul>
+<li>Include stakeholders from both technical and business domains</li>
+<li>Explicitly define what&#x27;s in scope and out of scope</li>
+<li>Document assumptions and constraints early</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-challenges">Common Challenges<a href="#common-challenges" class="hash-link" aria-label="Direct link to Common Challenges" title="Direct link to Common Challenges">​</a></h3>
+<ul>
+<li>Misalignment between business goals and ML capabilities</li>
+<li>Unrealistic expectations about what ML can achieve</li>
+<li>Poorly defined success metrics that don&#x27;t translate to business value</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-data-collection">2. Data Collection<a href="#2-data-collection" class="hash-link" aria-label="Direct link to 2. Data Collection" title="Direct link to 2. Data Collection">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-activities-1">Key Activities<a href="#key-activities-1" class="hash-link" aria-label="Direct link to Key Activities" title="Direct link to Key Activities">​</a></h3>
+<ul>
+<li><strong>Data Source Identification</strong>: Determine where required data exists (internal databases, external APIs, etc.)</li>
+<li><strong>Data Acquisition</strong>: Extract data from various sources</li>
+<li><strong>Data Governance</strong>: Ensure compliance with privacy regulations and internal policies</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-1">Best Practices<a href="#best-practices-1" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h3>
+<ul>
+<li>Create a data catalog documenting sources, owners, and access methods</li>
+<li>Establish data access patterns that can scale with project needs</li>
+<li>Consider data freshness requirements for training and inference</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-challenges-1">Common Challenges<a href="#common-challenges-1" class="hash-link" aria-label="Direct link to Common Challenges" title="Direct link to Common Challenges">​</a></h3>
+<ul>
+<li>Restricted access to necessary data</li>
+<li>Distributed data across incompatible systems</li>
+<li>Missing historical data needed for model training</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-data-preprocessing">3. Data Preprocessing<a href="#3-data-preprocessing" class="hash-link" aria-label="Direct link to 3. Data Preprocessing" title="Direct link to 3. Data Preprocessing">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-activities-2">Key Activities<a href="#key-activities-2" class="hash-link" aria-label="Direct link to Key Activities" title="Direct link to Key Activities">​</a></h3>
+<ul>
+<li><strong>Data Cleaning</strong>: Handle missing values, outliers, and errors</li>
+<li><strong>Data Transformation</strong>: Normalize, standardize, and encode features as needed</li>
+<li><strong>Data Integration</strong>: Combine data from multiple sources into coherent datasets</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-2">Best Practices<a href="#best-practices-2" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h3>
+<ul>
+<li>Create reproducible preprocessing pipelines</li>
+<li>Document all cleaning decisions and transformations</li>
+<li>Validate data quality after each preprocessing step</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-challenges-2">Common Challenges<a href="#common-challenges-2" class="hash-link" aria-label="Direct link to Common Challenges" title="Direct link to Common Challenges">​</a></h3>
+<ul>
+<li>Handling large volumes of data efficiently</li>
+<li>Balancing automated cleaning with manual review</li>
+<li>Maintaining consistency between training and production preprocessing</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-exploratory-data-analysis-eda">4. Exploratory Data Analysis (EDA)<a href="#4-exploratory-data-analysis-eda" class="hash-link" aria-label="Direct link to 4. Exploratory Data Analysis (EDA)" title="Direct link to 4. Exploratory Data Analysis (EDA)">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-activities-3">Key Activities<a href="#key-activities-3" class="hash-link" aria-label="Direct link to Key Activities" title="Direct link to Key Activities">​</a></h3>
+<ul>
+<li><strong>Statistical Analysis</strong>: Understand data distributions and relationships</li>
+<li><strong>Data Visualization</strong>: Create plots and charts to uncover patterns</li>
+<li><strong>Hypothesis Formulation</strong>: Develop initial theories about potential predictive signals</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-3">Best Practices<a href="#best-practices-3" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h3>
+<ul>
+<li>Use interactive notebooks for collaborative analysis</li>
+<li>Create reusable visualization templates for ongoing monitoring</li>
+<li>Document insights and share with stakeholders</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-challenges-3">Common Challenges<a href="#common-challenges-3" class="hash-link" aria-label="Direct link to Common Challenges" title="Direct link to Common Challenges">​</a></h3>
+<ul>
+<li>Identifying which patterns are actionable vs. coincidental</li>
+<li>Communicating statistical findings to non-technical stakeholders</li>
+<li>Efficiently exploring high-dimensional data</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-feature-engineering">5. Feature Engineering<a href="#5-feature-engineering" class="hash-link" aria-label="Direct link to 5. Feature Engineering" title="Direct link to 5. Feature Engineering">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-activities-4">Key Activities<a href="#key-activities-4" class="hash-link" aria-label="Direct link to Key Activities" title="Direct link to Key Activities">​</a></h3>
+<ul>
+<li><strong>Feature Creation</strong>: Derive new features from existing data</li>
+<li><strong>Feature Selection</strong>: Identify the most relevant features for the model</li>
+<li><strong>Feature Extraction</strong>: Use dimensionality reduction techniques when appropriate</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-4">Best Practices<a href="#best-practices-4" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h3>
+<ul>
+<li>Leverage domain expertise when creating features</li>
+<li>Test feature importance before incorporating them</li>
+<li>Create feature stores for reusable feature definitions</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-challenges-4">Common Challenges<a href="#common-challenges-4" class="hash-link" aria-label="Direct link to Common Challenges" title="Direct link to Common Challenges">​</a></h3>
+<ul>
+<li>Feature leakage introducing training-serving skew</li>
+<li>Handling features with different update frequencies</li>
+<li>Managing computational cost of complex features</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-model-selection">6. Model Selection<a href="#6-model-selection" class="hash-link" aria-label="Direct link to 6. Model Selection" title="Direct link to 6. Model Selection">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-activities-5">Key Activities<a href="#key-activities-5" class="hash-link" aria-label="Direct link to Key Activities" title="Direct link to Key Activities">​</a></h3>
+<ul>
+<li><strong>Algorithm Research</strong>: Review potential ML algorithms suitable for the problem</li>
+<li><strong>Baseline Model Creation</strong>: Develop simple models as performance benchmarks</li>
+<li><strong>Model Architecture Design</strong>: Define model structures, layers, and components</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-5">Best Practices<a href="#best-practices-5" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h3>
+<ul>
+<li>Start simple and gradually increase complexity only when needed</li>
+<li>Consider model explainability requirements</li>
+<li>Factor in production constraints (latency, memory usage) early</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-challenges-5">Common Challenges<a href="#common-challenges-5" class="hash-link" aria-label="Direct link to Common Challenges" title="Direct link to Common Challenges">​</a></h3>
+<ul>
+<li>Balancing model complexity with available data</li>
+<li>Overreliance on trending algorithms regardless of fit</li>
+<li>Navigating the trade-off between performance and explainability</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-model-training">7. Model Training<a href="#7-model-training" class="hash-link" aria-label="Direct link to 7. Model Training" title="Direct link to 7. Model Training">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-activities-6">Key Activities<a href="#key-activities-6" class="hash-link" aria-label="Direct link to Key Activities" title="Direct link to Key Activities">​</a></h3>
+<ul>
+<li><strong>Data Splitting</strong>: Divide data into training, validation, and test sets</li>
+<li><strong>Hyperparameter Selection</strong>: Configure model parameters that control learning</li>
+<li><strong>Model Fitting</strong>: Execute training algorithms to learn patterns from data</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-6">Best Practices<a href="#best-practices-6" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h3>
+<ul>
+<li>Use cross-validation for robust performance estimation</li>
+<li>Track experiments systematically (parameters, metrics, artifacts)</li>
+<li>Implement early stopping to prevent overfitting</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-challenges-6">Common Challenges<a href="#common-challenges-6" class="hash-link" aria-label="Direct link to Common Challenges" title="Direct link to Common Challenges">​</a></h3>
+<ul>
+<li>Managing computational resources for training large models</li>
+<li>Ensuring reproducibility across training runs</li>
+<li>Handling class imbalance in training data</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="8-model-evaluation">8. Model Evaluation<a href="#8-model-evaluation" class="hash-link" aria-label="Direct link to 8. Model Evaluation" title="Direct link to 8. Model Evaluation">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-activities-7">Key Activities<a href="#key-activities-7" class="hash-link" aria-label="Direct link to Key Activities" title="Direct link to Key Activities">​</a></h3>
+<ul>
+<li><strong>Performance Assessment</strong>: Measure model accuracy on hold-out test data</li>
+<li><strong>Error Analysis</strong>: Identify patterns in model mistakes</li>
+<li><strong>Comparative Evaluation</strong>: Benchmark against existing solutions</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-7">Best Practices<a href="#best-practices-7" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h3>
+<ul>
+<li>Use multiple evaluation metrics aligned with business goals</li>
+<li>Evaluate on sliced data to ensure consistent performance across segments</li>
+<li>Simulate real-world conditions during evaluation</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-challenges-7">Common Challenges<a href="#common-challenges-7" class="hash-link" aria-label="Direct link to Common Challenges" title="Direct link to Common Challenges">​</a></h3>
+<ul>
+<li>Metrics that don&#x27;t reflect real-world utility</li>
+<li>Overoptimization for benchmark performance</li>
+<li>Limited test data for rare but important cases</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="9-hyperparameter-tuning">9. Hyperparameter Tuning<a href="#9-hyperparameter-tuning" class="hash-link" aria-label="Direct link to 9. Hyperparameter Tuning" title="Direct link to 9. Hyperparameter Tuning">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-activities-8">Key Activities<a href="#key-activities-8" class="hash-link" aria-label="Direct link to Key Activities" title="Direct link to Key Activities">​</a></h3>
+<ul>
+<li><strong>Search Strategy Selection</strong>: Choose methods like grid search, random search, or Bayesian optimization</li>
+<li><strong>Tuning Execution</strong>: Systematically explore hyperparameter combinations</li>
+<li><strong>Performance Analysis</strong>: Identify optimal configurations based on validation metrics</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-8">Best Practices<a href="#best-practices-8" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h3>
+<ul>
+<li>Define clear search spaces for each hyperparameter</li>
+<li>Prioritize tuning the most impactful hyperparameters first</li>
+<li>Use distributed computing for efficient search when appropriate</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-challenges-8">Common Challenges<a href="#common-challenges-8" class="hash-link" aria-label="Direct link to Common Challenges" title="Direct link to Common Challenges">​</a></h3>
+<ul>
+<li>Computational expense of extensive tuning</li>
+<li>Risk of overfitting to the validation set</li>
+<li>Diminishing returns after initial optimization</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="10-model-deployment">10. Model Deployment<a href="#10-model-deployment" class="hash-link" aria-label="Direct link to 10. Model Deployment" title="Direct link to 10. Model Deployment">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-activities-9">Key Activities<a href="#key-activities-9" class="hash-link" aria-label="Direct link to Key Activities" title="Direct link to Key Activities">​</a></h3>
+<ul>
+<li><strong>Model Packaging</strong>: Wrap model in a deployable format</li>
+<li><strong>Integration</strong>: Connect model with production systems</li>
+<li><strong>Deployment Strategy</strong>: Choose between batch, streaming, or on-demand serving</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-9">Best Practices<a href="#best-practices-9" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h3>
+<ul>
+<li>Use containerization for consistent environments</li>
+<li>Implement canary releases or A/B testing for safe rollouts</li>
+<li>Document model inputs, outputs, and dependencies thoroughly</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-challenges-9">Common Challenges<a href="#common-challenges-9" class="hash-link" aria-label="Direct link to Common Challenges" title="Direct link to Common Challenges">​</a></h3>
+<ul>
+<li>Training-serving skew due to environment differences</li>
+<li>Latency requirements in real-time applications</li>
+<li>Integration with legacy systems</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="11-monitoring-and-maintenance">11. Monitoring and Maintenance<a href="#11-monitoring-and-maintenance" class="hash-link" aria-label="Direct link to 11. Monitoring and Maintenance" title="Direct link to 11. Monitoring and Maintenance">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-activities-10">Key Activities<a href="#key-activities-10" class="hash-link" aria-label="Direct link to Key Activities" title="Direct link to Key Activities">​</a></h3>
+<ul>
+<li><strong>Performance Tracking</strong>: Monitor model metrics in production</li>
+<li><strong>Data Drift Detection</strong>: Identify when input distributions change</li>
+<li><strong>Model Refreshing</strong>: Update models with new data periodically</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-10">Best Practices<a href="#best-practices-10" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h3>
+<ul>
+<li>Set up automated alerts for performance degradation</li>
+<li>Implement shadow deployments to test updates</li>
+<li>Maintain thorough version control of models</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-challenges-10">Common Challenges<a href="#common-challenges-10" class="hash-link" aria-label="Direct link to Common Challenges" title="Direct link to Common Challenges">​</a></h3>
+<ul>
+<li>Detecting subtle data drift before performance degradation</li>
+<li>Balancing refresh frequency with stability needs</li>
+<li>Attribution of performance changes to specific factors</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="12-documentation-and-communication">12. Documentation and Communication<a href="#12-documentation-and-communication" class="hash-link" aria-label="Direct link to 12. Documentation and Communication" title="Direct link to 12. Documentation and Communication">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-activities-11">Key Activities<a href="#key-activities-11" class="hash-link" aria-label="Direct link to Key Activities" title="Direct link to Key Activities">​</a></h3>
+<ul>
+<li><strong>Technical Documentation</strong>: Record model details, data processing, and architectural decisions</li>
+<li><strong>Result Communication</strong>: Present findings and model performance to stakeholders</li>
+<li><strong>Knowledge Transfer</strong>: Enable team members to understand and maintain the system</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-11">Best Practices<a href="#best-practices-11" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h3>
+<ul>
+<li>Create model cards documenting intended use cases, limitations, and ethical considerations</li>
+<li>Develop dashboards for ongoing visibility into model performance</li>
+<li>Maintain living documentation that evolves with the project</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-challenges-11">Common Challenges<a href="#common-challenges-11" class="hash-link" aria-label="Direct link to Common Challenges" title="Direct link to Common Challenges">​</a></h3>
+<ul>
+<li>Explaining complex models to non-technical stakeholders</li>
+<li>Keeping documentation synchronized with rapid development</li>
+<li>Balancing detail with accessibility in technical explanations</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="iterative-development">Iterative Development<a href="#iterative-development" class="hash-link" aria-label="Direct link to Iterative Development" title="Direct link to Iterative Development">​</a></h2>
+<p>Machine learning projects rarely follow a strictly linear path through these stages. Successful ML development typically involves continuous iteration, with insights from later stages informing refinements to earlier decisions.</p>
+<p><img decoding="async" loading="lazy" src="https://raw.githubusercontent.com/microsoft/AIWorkshop/main/images/ml_lifecycle.png" alt="ML Development Lifecycle Diagram" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="organizational-considerations">Organizational Considerations<a href="#organizational-considerations" class="hash-link" aria-label="Direct link to Organizational Considerations" title="Direct link to Organizational Considerations">​</a></h2>
+<p>Successful ML projects require collaboration across different roles:</p>
+<ul>
+<li><strong>Data Scientists</strong>: Focus on model development and evaluation</li>
+<li><strong>ML Engineers</strong>: Specialize in productionizing models</li>
+<li><strong>Data Engineers</strong>: Manage data pipelines and infrastructure</li>
+<li><strong>Domain Experts</strong>: Provide context and validate results</li>
+<li><strong>Product Managers</strong>: Align technical solutions with business needs</li>
+</ul>
+<p>Establishing clear handoffs and shared responsibility models between these roles is crucial for maintaining ML systems throughout their lifecycle.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="further-resources">Further Resources<a href="#further-resources" class="hash-link" aria-label="Direct link to Further Resources" title="Direct link to Further Resources">​</a></h2>
+<p>For a comprehensive guide to the tools and frameworks that support each stage of the ML lifecycle, see our <a href="/my-notes/docs/ml/tools-frameworks">ML Tools and Frameworks</a> page.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/nvgr-GenAI/my-notes/edit/main/docs/ml/development-lifecycle.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/my-notes/docs/ml/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Machine Learning (ML)</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/my-notes/docs/ml/supervised/intro"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Introduction to Supervised Learning</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-problem-definition" class="table-of-contents__link toc-highlight">1. Problem Definition</a><ul><li><a href="#key-activities" class="table-of-contents__link toc-highlight">Key Activities</a></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a></li><li><a href="#common-challenges" class="table-of-contents__link toc-highlight">Common Challenges</a></li></ul></li><li><a href="#2-data-collection" class="table-of-contents__link toc-highlight">2. Data Collection</a><ul><li><a href="#key-activities-1" class="table-of-contents__link toc-highlight">Key Activities</a></li><li><a href="#best-practices-1" class="table-of-contents__link toc-highlight">Best Practices</a></li><li><a href="#common-challenges-1" class="table-of-contents__link toc-highlight">Common Challenges</a></li></ul></li><li><a href="#3-data-preprocessing" class="table-of-contents__link toc-highlight">3. Data Preprocessing</a><ul><li><a href="#key-activities-2" class="table-of-contents__link toc-highlight">Key Activities</a></li><li><a href="#best-practices-2" class="table-of-contents__link toc-highlight">Best Practices</a></li><li><a href="#common-challenges-2" class="table-of-contents__link toc-highlight">Common Challenges</a></li></ul></li><li><a href="#4-exploratory-data-analysis-eda" class="table-of-contents__link toc-highlight">4. Exploratory Data Analysis (EDA)</a><ul><li><a href="#key-activities-3" class="table-of-contents__link toc-highlight">Key Activities</a></li><li><a href="#best-practices-3" class="table-of-contents__link toc-highlight">Best Practices</a></li><li><a href="#common-challenges-3" class="table-of-contents__link toc-highlight">Common Challenges</a></li></ul></li><li><a href="#5-feature-engineering" class="table-of-contents__link toc-highlight">5. Feature Engineering</a><ul><li><a href="#key-activities-4" class="table-of-contents__link toc-highlight">Key Activities</a></li><li><a href="#best-practices-4" class="table-of-contents__link toc-highlight">Best Practices</a></li><li><a href="#common-challenges-4" class="table-of-contents__link toc-highlight">Common Challenges</a></li></ul></li><li><a href="#6-model-selection" class="table-of-contents__link toc-highlight">6. Model Selection</a><ul><li><a href="#key-activities-5" class="table-of-contents__link toc-highlight">Key Activities</a></li><li><a href="#best-practices-5" class="table-of-contents__link toc-highlight">Best Practices</a></li><li><a href="#common-challenges-5" class="table-of-contents__link toc-highlight">Common Challenges</a></li></ul></li><li><a href="#7-model-training" class="table-of-contents__link toc-highlight">7. Model Training</a><ul><li><a href="#key-activities-6" class="table-of-contents__link toc-highlight">Key Activities</a></li><li><a href="#best-practices-6" class="table-of-contents__link toc-highlight">Best Practices</a></li><li><a href="#common-challenges-6" class="table-of-contents__link toc-highlight">Common Challenges</a></li></ul></li><li><a href="#8-model-evaluation" class="table-of-contents__link toc-highlight">8. Model Evaluation</a><ul><li><a href="#key-activities-7" class="table-of-contents__link toc-highlight">Key Activities</a></li><li><a href="#best-practices-7" class="table-of-contents__link toc-highlight">Best Practices</a></li><li><a href="#common-challenges-7" class="table-of-contents__link toc-highlight">Common Challenges</a></li></ul></li><li><a href="#9-hyperparameter-tuning" class="table-of-contents__link toc-highlight">9. Hyperparameter Tuning</a><ul><li><a href="#key-activities-8" class="table-of-contents__link toc-highlight">Key Activities</a></li><li><a href="#best-practices-8" class="table-of-contents__link toc-highlight">Best Practices</a></li><li><a href="#common-challenges-8" class="table-of-contents__link toc-highlight">Common Challenges</a></li></ul></li><li><a href="#10-model-deployment" class="table-of-contents__link toc-highlight">10. Model Deployment</a><ul><li><a href="#key-activities-9" class="table-of-contents__link toc-highlight">Key Activities</a></li><li><a href="#best-practices-9" class="table-of-contents__link toc-highlight">Best Practices</a></li><li><a href="#common-challenges-9" class="table-of-contents__link toc-highlight">Common Challenges</a></li></ul></li><li><a href="#11-monitoring-and-maintenance" class="table-of-contents__link toc-highlight">11. Monitoring and Maintenance</a><ul><li><a href="#key-activities-10" class="table-of-contents__link toc-highlight">Key Activities</a></li><li><a href="#best-practices-10" class="table-of-contents__link toc-highlight">Best Practices</a></li><li><a href="#common-challenges-10" class="table-of-contents__link toc-highlight">Common Challenges</a></li></ul></li><li><a href="#12-documentation-and-communication" class="table-of-contents__link toc-highlight">12. Documentation and Communication</a><ul><li><a href="#key-activities-11" class="table-of-contents__link toc-highlight">Key Activities</a></li><li><a href="#best-practices-11" class="table-of-contents__link toc-highlight">Best Practices</a></li><li><a href="#common-challenges-11" class="table-of-contents__link toc-highlight">Common Challenges</a></li></ul></li><li><a href="#iterative-development" class="table-of-contents__link toc-highlight">Iterative Development</a></li><li><a href="#organizational-considerations" class="table-of-contents__link toc-highlight">Organizational Considerations</a></li><li><a href="#further-resources" class="table-of-contents__link toc-highlight">Further Resources</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docusaurus</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/my-notes/docs/intro">Tutorial</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/in/vnakka/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/NVGR" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 My Notes, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
