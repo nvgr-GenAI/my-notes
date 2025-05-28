@@ -32,7 +32,7 @@ const config: Config = {
   },
 
   plugins: [
-    './plugins/math-plugin',
+    // './plugins/math-plugin',
   ],
 
   // Add markdown configuration to enable Mermaid
@@ -52,6 +52,9 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/nvgr-GenAI/my-notes/edit/main/',
+
+          remarkPlugins: [require('remark-math')],
+          rehypePlugins: [require('rehype-katex')],
         },
         blog: {
           showReadingTime: true,
@@ -68,10 +71,10 @@ const config: Config = {
 
   stylesheets: [
     {
-      href: 'https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css',
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css',
       type: 'text/css',
       integrity:
-        'sha384-vZTG03mC26gY2vDfo3CvXfQfFz38SBcBvIRVJyhtRZf5V1dYy5x1PfaIQHx6dK+0',
+        'sha384-mll67QQHND5T9YdSbYVm+XjKDzWcW+VYuMuU8WvTPexdZsEtG4kGCGkFZ5FZDfWJ',
       crossorigin: 'anonymous',
     },
   ],
