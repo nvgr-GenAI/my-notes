@@ -391,5 +391,4 @@ When implementing MCP in your applications, consider these best practices:
 ## Next Steps
 
 - Explore [MCP Tools & Frameworks](./tools-frameworks.md) for additional libraries and tools
-- Review real-world [Case Studies](./case-studies.md) of MCP implementations
 - Check out the [Core Concepts](./core-concepts.md) if you need a refresher on fundamental principles

@@ -98,7 +98,7 @@ GenAI is transforming industries and workflows by enabling:
 | [Prompting](/docs/genai/prompting/fundamentals) | Techniques, best practices, and challenges |
 | [RAG](/docs/genai/rag/intro) | Retrieval-augmented generation approaches |
 | [Agents](/docs/genai/agents/foundations) | Multi-agent systems, architectures and applications |
-| [MCP](/docs/genai/mcp/index) | Model Context Protocol and implementations |
+| [MCP](/docs/genai/mcp/index.md) | Model Context Protocol and implementations |
 
 ## Getting Started
 

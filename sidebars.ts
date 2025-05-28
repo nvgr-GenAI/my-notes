@@ -92,54 +92,78 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Large Language Models',
       items: [
-        'genai/llms/intro',
-        'genai/llms/model-landscape',
-        'genai/llms/model-selection',
-        // Other LLM files will be added as they are created
+        // Beginner section
+        {
+          type: 'category',
+          label: 'Beginner: LLM Fundamentals',
+          items: [
+            'genai/llms/intro',
+            'genai/llms/language-modeling-basics',
+            'genai/llms/model-landscape',
+          ],
+        },
+        // Intermediate section
+        {
+          type: 'category',
+          label: 'Intermediate: Architecture & Training',
+          items: [
+            'genai/llms/core-concepts',
+            'genai/llms/training',
+            'genai/transformers/intro',
+            'genai/transformers/components',
+          ],
+        },
+        // Advanced section
+        {
+          type: 'category',
+          label: 'Advanced: Model Selection & Optimization',
+          items: [
+            'genai/llms/model-selection',
+            'genai/transformers/architecture',
+          ],
+        },
       ],
     },
     {
       type: 'category',
-      label: 'Transformer Architecture',
+      label: 'Working with LLMs',
       items: [
-        'genai/transformers/intro',
-        'genai/transformers/components',
-        'genai/transformers/architecture',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Prompt Engineering',
-      items: [
-        'genai/prompting/fundamentals',
-        // Other prompting files will be added as they are created
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Retrieval Augmented Generation',
-      items: [
-        'genai/rag/intro',
-        'genai/rag/fundamentals',
-        'genai/rag/implementation',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'AI Agents',
-      items: [
-        'genai/agents/foundations',
-        // Other agent files will be added as they are created
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Model Context Protocol',
-      items: [
-        'genai/mcp/index',
-        'genai/mcp/core-concepts',
-        'genai/mcp/implementation',
-        'genai/mcp/tools-frameworks',
+        // Practical Implementation section
+        {
+          type: 'category',
+          label: 'Prompt Engineering',
+          items: [
+            'genai/prompting/fundamentals',
+            // Other prompting files will be added as they are created
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Retrieval Augmented Generation',
+          items: [
+            'genai/rag/intro',
+            'genai/rag/fundamentals',
+            'genai/rag/implementation',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'AI Agents',
+          items: [
+            'genai/agents/foundations',
+            // Other agent files will be added as they are created
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Model Context Protocol',
+          items: [
+            'genai/mcp/index',
+            'genai/mcp/core-concepts',
+            'genai/mcp/implementation',
+            'genai/mcp/tools-frameworks',
+          ],
+        },
       ],
     },
   ],
