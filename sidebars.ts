@@ -87,7 +87,61 @@ const sidebars: SidebarsConfig = {
   ],
   genaiSidebar: [
     'genai/index',
-    // Add other documents here in the desired order
+    'genai/foundations',
+    {
+      type: 'category',
+      label: 'Large Language Models',
+      items: [
+        'genai/llms/intro',
+        'genai/llms/model-landscape',
+        'genai/llms/model-selection',
+        // Other LLM files will be added as they are created
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Transformer Architecture',
+      items: [
+        'genai/transformers/intro',
+        'genai/transformers/components',
+        'genai/transformers/architecture',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Prompt Engineering',
+      items: [
+        'genai/prompting/fundamentals',
+        // Other prompting files will be added as they are created
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Retrieval Augmented Generation',
+      items: [
+        'genai/rag/intro',
+        'genai/rag/fundamentals',
+        'genai/rag/implementation',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'AI Agents',
+      items: [
+        'genai/agents/foundations',
+        // Other agent files will be added as they are created
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Model Context Protocol',
+      items: [
+        'genai/mcp/index',
+        'genai/mcp/core-concepts',
+        'genai/mcp/implementation',
+        'genai/mcp/tools-frameworks',
+      ],
+    },
   ],
   algorithmsSidebar: [
     'algorithms/index',
