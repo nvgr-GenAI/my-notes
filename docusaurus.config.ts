@@ -35,6 +35,14 @@ const config: Config = {
     './plugins/math-plugin',
   ],
 
+  // Add markdown configuration to enable Mermaid
+  markdown: {
+    mermaid: true,
+  },
+
+  // Add Mermaid theme
+  themes: ['@docusaurus/theme-mermaid'],
+
   presets: [
     [
       'classic',
@@ -122,6 +130,16 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    // Add Mermaid configuration
+    mermaid: {
+      theme: {light: 'neutral', dark: 'dark'},
+      options: {
+        flowchart: {
+          htmlLabels: true,
+          curve: 'linear',
+        },
+      },
     },
   } satisfies Preset.ThemeConfig,
 };

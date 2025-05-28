@@ -14,9 +14,7 @@ module.exports = function (context, options) {
       };
     },
     extendDefaultPlugins: true,
-    contentLoaderOptions: {
-      remarkPlugins: [remarkMath],
-      rehypePlugins: [[rehypeKatex, { strict: false, throwOnError: false, trust: true }]],
-    },
+    beforeDefaultRemarkPlugins: [remarkMath],
+    beforeDefaultRehypePlugins: [[rehypeKatex, { strict: false, throwOnError: false, trust: true }]],
   };
 };
