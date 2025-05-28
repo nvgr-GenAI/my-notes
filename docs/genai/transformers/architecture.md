@@ -147,11 +147,11 @@ Multi-head attention is the mechanism that enables transformers to capture diffe
 
 The attention computation follows:
 
-<div className="math math-display">
-  <latex>Attention(Q, K, V) = softmax(QK^T/\sqrt{d_k}) \cdot V</latex>
-</div>
+<!-- $$
+Attention(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right) \cdot V
+$$ -->
 
-Where <latex>d_k</latex> is the dimension of the key vectors.
+<!-- Where $d_k$ is the dimension of the key vectors. -->
 
 ### 4. Feed-Forward Network
 
